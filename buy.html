@@ -81,8 +81,9 @@
     AOS.init();
     // Validation Functions
 function isValidPhone(phone) {
-  return /^\+\d{1,3}\d{10}$/.test(phone);  // e.g., +911234567890
+  return /^\+\d{1,3}[1-9]\d{9}$/.test(phone);
 }
+
 
 function isValidName(name) {
   return /^[A-Za-z]+ [A-Za-z]+$/.test(name); // at least first and last name
