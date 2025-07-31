@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e1e2f, #3a0ca3);
+  padding: 20px;
+  color: white;
+}
+
+.main-header {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 700;
+  padding: 14px;
+  color: white;
+  background: linear-gradient(to right, #3a0ca3, #7209b7);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #3a0ca3, #7209b7);
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #4895ef, #7209b7 );
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 5px #1d1d20ff;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: #4361ee;
+}
+
+.back-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px #1e1e2f;
+}
+
+.back-btn svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.site-title {
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-right: 40px;
+}
+
+.order-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(24, 168, 230, 0.2);
+  text-align: center;
+}
+
+.product-order-image {
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+  border: 3px solid #4895ef;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease;
+}
+
+.product-order-image:hover {
+  transform: scale(1.15);
+}
+
+.product-title {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #7209b7;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  background-color: #2c2c3a;
+  color: white;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #aaa;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #4895ef;
+  box-shadow: 0 0 6px #4895ef;
+  background-color: #1e1e2f;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.buy-btn {
+  background: linear-gradient(to right, #9e48efff, #4895ef, #6148efff, #764fe9ff, #7209b7 );
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 6px #1d1d1eff;
+  transition: all 0.2s ease;
+  transform: perspective(800px);
+}
+
+.buy-btn:hover {
+  box-shadow: 0 8px 15px rgba(14, 108, 248, 0.61);
+  transform: scale(1.02);
+}
+
+.buy-btn:active {
+  box-shadow: 0 2px #3a0ca3;
+  transform: translateY(4px) scale(0.96) rotateX(3deg);
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95rem;
+  color: #cccccc;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+}
+
+#thankyouMessage {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 600;
+}

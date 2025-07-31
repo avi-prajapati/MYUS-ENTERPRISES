@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Product - MYUS ENTERPRISE</title>
+  <link rel="stylesheet" href="css/buy.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="back-container">
+  <button class="back-btn" onclick="history.back()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+    
+  </button>
+</div>
+
+    MYUS ENTERPRISE
+  </header>
+
+  <div class="order-form" data-aos="fade-up">
+    <img id="productImage" class="product-order-image"/>
+    <h2 id="productTitle"></h2>
+
+    <h3>Please provide your details to Place the order</h3>
+
+    <form id="order-form">
+      <label>Quantity:</label>
+      <select id="quantity" required>
+        <option value="">Select</option>
+        <option value="90">90</option>
+        <option value="180">180</option>
+      </select>
+
+      <label>Payment Method:</label>
+      <select id="payment" required>
+        <option value="">Choose method</option>
+        <option>Credit Card</option>
+        <option>Debit Card</option>
+        <option>Paypal</option>
+        <option>ACH Bank Transfer</option>
+        <option>Western Union</option>
+        <option>Moneygram</option>
+        <option>Bitcoin</option>
+      </select>
+
+      <label>Your Name:</label>
+      <input type="text" id="name" placeholder="First & Last Name" required/>
+
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="abc@xyz.com" required/>
+
+      <label>Phone Number:</label>
+      <input type="tel" id="phone" placeholder="+911234567890" required/>
+
+      <label>Address:</label>
+      <textarea id="notes" placeholder="Enter your full address including city, district, state, and pin code" required></textarea>
+
+
+      <button class="buy-btn">Place Order</button>
+
+    </form>
+  </div>
+
+  <div id="thankyouMessage" style="display:none;" data-aos="zoom-in">
+    <h2>Thank you for your order!</h2>
+    <p>We received your request for "<span id="orderedProductName"></span>".<br>
+       Payment instructions will be sent via email or SMS shortly.</p>
+  </div>
+
+  <footer class="footer">&copy; 2025 MYUS ENTERPRISE | All rights reserved.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    // Validation Functions
+function isValidPhone(phone) {
+  return /^\+\d{1,3}\d{10}$/.test(phone);  // e.g., +911234567890
+}
+
+function isValidName(name) {
+  return /^[A-Za-z]+ [A-Za-z]+$/.test(name); // at least first and last name
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+    emailjs.init("ocKaaprVeipH056ak"); // your public key
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+    const img = urlParams.get('img');
+
+    document.getElementById("productImage").src = img;
+    document.getElementById("productTitle").textContent = product;
+
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const quantity = document.getElementById('quantity').value;
+      const payment = document.getElementById('payment').value;
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const notes = document.getElementById('notes').value;
+
+      if (!quantity || !payment || !name || !email || !phone) {
+  alert("Please fill all required fields.");
+  return;
+}
+
+if (!isValidName(name)) {
+  alert("Enter your full name (first and last).");
+  return;
+}
+
+if (!isValidEmail(email)) {
+  alert("Please enter a valid email address.");
+  return;
+}
+
+if (!isValidPhone(phone)) {
+  alert("Enter valid phone with country code (e.g., +911234567890).");
+  return;
+}
+
+
+      const params = {
+        product: product,
+        quantity: quantity,
+        payment: payment,
+        name: name,
+        email: email,
+        phone: phone,
+        notes: notes,
+        img: img
+      };
+
+      emailjs.send("service_cwr5w8g", "template_xl5v39f", params)
+        .then(() => {
+          document.querySelector('form').style.display = 'none';
+          document.getElementById('thankyouMessage').style.display = 'block';
+          document.getElementById('orderedProductName').textContent = product;
+        })
+        .catch((err) => {
+          console.error("EmailJS error:", err);
+          alert("Something went wrong. Please try again.");
+        });
+    });
+  </script>
+</body>
+</html>
