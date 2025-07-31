@@ -79,8 +79,7 @@ const products = [
     Manufacturer: Dimedics<br>
     Tramadol is used to relieve moderate to moderately severe pain, including pain after surgery.
     <div style="font-weight: bold; font-size: 1.2em; margin-bottom: 8px;">
-      Price: 90 Pills for $285
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;180 Pills for $420
+      Price:180 Pills for $420
     </div>
     <div style="font-size: 1em; font-weight: normal;">`
   },
@@ -93,8 +92,7 @@ const products = [
     Manufacturer: Tydol<br>
     Tapentadol oral solution and tablet are used to treat pain severe enough to require opioid treatment and when other pain medicines did not work well enough or cannot be tolerated.
     <div style="font-weight: bold; font-size: 1.2em; margin-bottom: 8px;">
-      Price: 90 Pills for $285
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;180 Pills for $420
+      Price: 180 Pills for $420
     </div>
     <div style="font-size: 1em; font-weight: normal;">`
   },
