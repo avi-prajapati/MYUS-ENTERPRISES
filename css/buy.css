@@ -12,23 +12,24 @@ body {
 }
 
 .main-header {
-  text-align: center;
-  font-size: 2.7rem;
-  font-weight: 700;
-  padding: 14px;
-  color: white;
+  width: 100%;
+  max-width: 1475px;
+  margin: 0 auto;
+  height: 80px;
   background: linear-gradient(to right, #3a0ca3, #7209b7);
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-bar {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #3a0ca3, #7209b7);
-  padding: 12px 20px;
-  border-radius: 12px;
+  padding: 0 20px;
 }
 
 .back-btn {
@@ -61,13 +62,13 @@ body {
 }
 
 .site-title {
-  flex: 1;
-  text-align: center;
   font-size: 2rem;
   font-weight: 700;
   color: white;
-  margin-right: 40px;
+  text-align: center;
+  flex-grow: 1;
 }
+
 
 .order-form {
   max-width: 600px;
@@ -164,14 +165,77 @@ textarea {
   transform: translateY(4px) scale(0.96) rotateX(3deg);
 }
 
-.footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 0.95rem;
-  color: #cccccc;
-  border-top: 1px solid #444;
-  margin-top: 40px;
+/* FOOTER */
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 0;
+  backdrop-filter: blur(12px);
+  background: transparent;
+  margin-top: 1px;
 }
+
+.footer-box {
+  
+  background: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 217, 0, 0);
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 217, 0, 0);
+}
+
+/* Contact Line */
+.contact-line {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Phone Icon */
+.icon {
+  font-size: 1.3rem;
+}
+
+/* Phone Number */
+.phone-number {
+  font-weight: bold;
+}
+
+/* Social Line */
+.social-line {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  font-size: 1.6rem;
+  color: gold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.4);
+  
+}
+
+/* Copyright */
+.footer-box .copyright {
+  color: #aaa;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
 
 #thankyouMessage {
   text-align: center;
