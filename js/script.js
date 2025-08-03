@@ -109,6 +109,20 @@ const products = [
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;180 Pills for $420
     </div>
     <div style="font-size: 1em; font-weight: normal;">`
+  },
+  {
+    title: " Soma 350 Mg Tablet ",
+    image: "Image/9Cari.png",
+    description: `Strength: 350 mg<br>
+    Packaging Size: 10×10 Tablets<br>
+    Brand: Soma<br>
+    Manufacturer: HAB Pharma<br>
+    Carisoprodol Pain O Soma 350mg Tablets are effective muscle relaxants used for the relief of acute musculoskeletal pain.
+    <div style="font-weight: bold; font-size: 1.2em; margin-bottom: 8px;">
+      Price: 90 Pills for $285
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;180 Pills for $420
+    </div>
+    <div style="font-size: 1em; font-weight: normal;">`
   }
 ];
 
