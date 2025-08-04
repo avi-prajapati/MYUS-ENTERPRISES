@@ -119,8 +119,7 @@ const products = [
     Manufacturer: HAB Pharma<br>
     Carisoprodol Pain O Soma 350mg Tablets are effective muscle relaxants used for the relief of acute musculoskeletal pain.
     <div style="font-weight: bold; font-size: 1.2em; margin-bottom: 8px;">
-      Price: 90 Pills for $285
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;180 Pills for $420
+      Price: 180 Pills for $250
     </div>
     <div style="font-size: 1em; font-weight: normal;">`
   }
